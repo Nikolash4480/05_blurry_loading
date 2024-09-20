@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@font-face {
+  font-family: 'karixby';
+  src: url(./Karixby-font\KARIXBY-Demo.otf);
+}
+@font-face {
+  font-family: 'Digital7';
+  src: url(./Digital-7font\Digital7-rg1mL.ttf);
+}
+
+:root {
+  --negro-oscuro: #000000; /* Negro oscuro */
+  --naranja-fuerte: #FF6600; /* Naranja fuerte */
+  --naranja-claro: #FFA500; /* Naranja claro (opcional) */
+  --naranja-oscuro: #A44A1E; /* Naranja oscuro */
+  --gris: #808080; /* Gris para detalles o sombras (opcional) */
+  --karix-font: 'karixby', sans-serif; /* Fuente KarixBy */
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.section {
+  background: url('./assets/eva.png')
+    no-repeat center center/cover;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  filter: blur(0px);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loading {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  width: 400px;
+  height: 120px;
+  color: var(--naranja-fuerte);
+  margin: 5px;
+  font-family: var(--karix-font);
+  background-color: var(--naranja-fuerte);
+  color: var(--negro-oscuro);
+  padding: 14px 20px;
+  border: 1.5px solid var(--naranja-fuerte);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.loading::before,
+.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  top: 10%;
+  left: 30%;
+  z-index: -1;
+  transition: height .9s, width .9s;
+  backdrop-filter: invert(20deg);
+  border: 2px;
+}
+
+.loading::after {
+  top: -14px;
+  left: -14px;
+  bottom: auto;
+  right: auto;
+  border-top: 1.5px solid var(--naranja-fuerte);
+  border-left: 1.5px solid var(--naranja-fuerte);
+}
+
+.loading::before {
+  top: -14px;
+  left: auto;
+  bottom: auto;
+  right: -14px;
+  border-top: 1.5px solid var(--naranja-fuerte);
+  border-right: 1.5px solid var(--naranja-fuerte);    
+}
+
+.loading::before, .loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  top: 10%;
+  left: 70%; /* Cambié de 30% a 70% */
+  z-index: -1;
+  transition: height .9s, width .9s;
+  backdrop-filter: invert(20deg);
+  border: 2px;
+}
+
+.loading::after {
+  top: -14px;
+  left: auto;
+  bottom: auto;
+  right: -14px;
+  border-top: 1.5px solid var(--naranja-fuerte);
+  border-right: 1.5px solid var(--naranja-fuerte);    
+}
+
+.loading::before {
+  top: -14px;
+  left: -14px;
+  bottom: auto;
+  right: auto;
+  border-top: 1.5px solid var(--naranja-fuerte);
+  border-left: 1.5px solid var(--naranja-fuerte);
+}
